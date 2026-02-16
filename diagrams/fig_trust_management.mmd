@@ -1,0 +1,14 @@
+graph LR
+    DEV["IoT Device"] --> AUTH["Authentication"]
+    AUTH --> SC["Policy Check"]
+    SC --> TRUST["Trust Score"]
+    TRUST --> ACC["Access Decision"]
+    ACC --> LOG["Audit Log"]
+    LOG -.->|"Feedback"| AUTH
+
+    style DEV fill:#D6E4F0,color:#1F4E79,stroke:#9DC3E6
+    style AUTH fill:#9DC3E6,color:#1F4E79,stroke:#2E75B6
+    style SC fill:#5B9BD5,color:#fff,stroke:#2E75B6
+    style TRUST fill:#2E75B6,color:#fff,stroke:#1F4E79
+    style ACC fill:#1F4E79,color:#fff,stroke:#1F4E79
+    style LOG fill:#2E75B6,color:#fff,stroke:#1F4E79

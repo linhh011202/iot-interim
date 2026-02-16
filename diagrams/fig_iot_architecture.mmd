@@ -1,0 +1,17 @@
+graph TB
+    A["Application"]
+    M["Blockchain Middleware"]
+    N["Network"]
+    P["Perception"]
+    S["Storage"]
+
+    P -->|"Sensors, RFID"| N
+    N -->|"Wi-Fi, 5G, LoRa"| M
+    M -->|"Contracts, Ledger"| A
+    M -->|"On/Off chain"| S
+
+    style A fill:#1F4E79,color:#fff,stroke:#1F4E79
+    style M fill:#2E75B6,color:#fff,stroke:#1F4E79
+    style N fill:#5B9BD5,color:#fff,stroke:#2E75B6
+    style P fill:#9DC3E6,color:#1F4E79,stroke:#2E75B6
+    style S fill:#D6E4F0,color:#1F4E79,stroke:#9DC3E6

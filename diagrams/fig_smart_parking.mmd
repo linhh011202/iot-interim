@@ -1,0 +1,15 @@
+graph TB
+    S["IoT Sensors"] -->|"Occupancy data"| CL["Cloud Platform"]
+    CL -->|"Routing"| PL["Planner Agent"]
+    PL -->|"Assignment"| DR["Driver Agent"]
+    ENV["Environment Agent"] -->|"Status"| PL
+    S -->|"Updates"| ENV
+
+    DR --> R["Key Results"]
+
+    style S fill:#9DC3E6,color:#1F4E79,stroke:#2E75B6
+    style CL fill:#5B9BD5,color:#fff,stroke:#2E75B6
+    style PL fill:#2E75B6,color:#fff,stroke:#1F4E79
+    style DR fill:#1F4E79,color:#fff,stroke:#1F4E79
+    style ENV fill:#2E75B6,color:#fff,stroke:#1F4E79
+    style R fill:#D6E4F0,color:#1F4E79,stroke:#9DC3E6

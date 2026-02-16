@@ -1,0 +1,14 @@
+graph TB
+    ISS["Issuer"] -->|"Issues VC"| HOL["Holder"]
+    HOL -->|"Presents VP"| VER["Verifier"]
+    VER -->|"Resolves DID"| BC["DID Registry"]
+    ISS -->|"Registers"| BC
+
+    HOL -->|"ZKP"| ZKP["Privacy Layer"]
+    ZKP --> VER
+
+    style ISS fill:#2E75B6,color:#fff,stroke:#1F4E79
+    style HOL fill:#1F4E79,color:#fff,stroke:#1F4E79
+    style VER fill:#2E75B6,color:#fff,stroke:#1F4E79
+    style BC fill:#5B9BD5,color:#fff,stroke:#2E75B6
+    style ZKP fill:#D6E4F0,color:#1F4E79,stroke:#9DC3E6
