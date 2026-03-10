@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.2.15)  16 FEB 2026 19:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2026.3.10)  10 MAR 2026 18:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -357,7 +357,7 @@ Package pdftex.def Info: images/fig_blockchain_core.png  used on input line 61.
 dist/fonts/enc/dvips/base/8r.enc}
 
 
- <./images/fig_survey_scope.png> <./images/fig_blockchain_core.png>]
+ <./images/fig_survey_scope.png>]
 <images/fig_trust_management.png, id=12, 1225.57875pt x 129.48375pt>
 File: images/fig_trust_management.png Graphic file (type png)
 <use images/fig_trust_management.png>
@@ -376,19 +376,19 @@ Underfull \hbox (badness 7667) in paragraph at lines 86--87
 /10 De-cen-tral-ized
  []
 
-<images/fig_consensus_comparison.png, id=14, 685.56125pt x 279.0425pt>
+<images/fig_consensus_comparison.png, id=14, 1589.94pt x 783.92876pt>
 File: images/fig_consensus_comparison.png Graphic file (type png)
 <use images/fig_consensus_comparison.png>
 Package pdftex.def Info: images/fig_consensus_comparison.png  used on input lin
 e 91.
-(pdftex.def)             Requested size: 252.0pt x 102.57137pt.
-<images/fig_dchr_taxonomy.png, id=15, 979.66pt x 383.4325pt>
+(pdftex.def)             Requested size: 252.0pt x 124.24695pt.
+[2 <./images/fig_blockchain_core.png> <./images/fig_trust_management.png> <./im
+ages/fig_identity_management.png> <./images/fig_consensus_comparison.png>]
+<images/fig_dchr_taxonomy.png, id=18, 979.66pt x 383.4325pt>
 File: images/fig_dchr_taxonomy.png Graphic file (type png)
 <use images/fig_dchr_taxonomy.png>
 Package pdftex.def Info: images/fig_dchr_taxonomy.png  used on input line 105.
 (pdftex.def)             Requested size: 252.0pt x 98.63112pt.
-[2 <./images/fig_trust_management.png> <./images/fig_identity_management.png> <
-./images/fig_consensus_comparison.png>]
 <images/fig_smart_parking.png, id=19, 460.72125pt x 560.0925pt>
 File: images/fig_smart_parking.png Graphic file (type png)
 <use images/fig_smart_parking.png>
@@ -405,13 +405,15 @@ Underfull \hbox (badness 2057) in paragraph at lines 136--137
 []\OT1/ptm/m/n/10 Results demon-strate sub-stan-tial im-prove-ments: av-er-age
  []
 
-<images/fig_cross_domain.png, id=21, 1290.8225pt x 174.6525pt>
+[3 <./images/fig_dchr_taxonomy.png> <./images/fig_smart_parking.png>]
+<images/fig_cross_domain.png, id=24, 1290.8225pt x 174.6525pt>
 File: images/fig_cross_domain.png Graphic file (type png)
 <use images/fig_cross_domain.png>
 Package pdftex.def Info: images/fig_cross_domain.png  used on input line 143.
 (pdftex.def)             Requested size: 252.0pt x 34.09573pt.
 LaTeX Font Info:    Trying to load font information for U+msa on input line 153
 .
+
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -421,6 +423,9 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 153
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+
 Underfull \hbox (badness 1454) in paragraph at lines 182--183
 []|\OT1/ptm/m/n/8 Hierarchical blockchains [13], edge ag-gre-ga-tion,
  []
@@ -430,19 +435,40 @@ Underfull \hbox (badness 5245) in paragraph at lines 188--189
 []|\OT1/ptm/m/n/8 Standardized DIDs/VCs [11], ERC-1155 cross
  []
 
-[3 <./images/fig_dchr_taxonomy.png> <./images/fig_smart_parking.png>]
-<images/fig_challenges_future.png, id=25, 551.05875pt x 558.085pt>
+[4 <./images/fig_iot_architecture.png> <./images/fig_cross_domain.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 264--264
+[]|\OT1/ptm/m/n/8 PUF + blockchain
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 266--266
+[]|\OT1/ptm/m/n/8 Device
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 270--270
+[]|\OT1/ptm/m/n/8 Privacy
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 274--274
+[]|\OT1/ptm/m/n/8 Provenance
+ []
+
+[5]
+<images/fig_challenges_future.png, id=33, 551.05875pt x 558.085pt>
 File: images/fig_challenges_future.png Graphic file (type png)
 <use images/fig_challenges_future.png>
 Package pdftex.def Info: images/fig_challenges_future.png  used on input line 2
-04.
+90.
 (pdftex.def)             Requested size: 252.0pt x 255.21494pt.
- [4 <./images/fig_iot_architecture.png> <./images/fig_cross_domain.png>]
-Underfull \hbox (badness 1521) in paragraph at lines 222--223
+
+Underfull \hbox (badness 1521) in paragraph at lines 310--311
 []\OT1/ptm/m/n/8 B. Khayer, S. Mirzaei, H. Alav-izadeh, and A. Salehi Shahraki,
 
  []
 
+[6 <./images/fig_challenges_future.png>]
 
 ** Conference Paper **
 Before submitting the final camera ready copy, remember to:
@@ -454,28 +480,32 @@ Before submitting the final camera ready copy, remember to:
  uses only Type 1 fonts and that every step in the generation
  process uses the appropriate paper size.
 
-[5 <./images/fig_challenges_future.png>] (./term_paper.aux)
+[7
+
+] (./term_paper.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4468 strings out of 476106
- 70905 string characters out of 5793933
- 1942975 words of memory out of 5000000
- 26433 multiletter control sequences out of 15000+600000
+ 4474 strings out of 476106
+ 70959 string characters out of 5793933
+ 1955975 words of memory out of 5000000
+ 26439 multiletter control sequences out of 15000+600000
  595148 words of font info for 103 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 57i,10n,65p,1244b,308s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/t
-exlive/texmf-dist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/urw/times/utmri8a.pfb>
-Output written on term_paper.pdf (5 pages, 264174 bytes).
+ 57i,11n,65p,1273b,308s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/urw/times/utmbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utm
+ri8a.pfb>
+Output written on term_paper.pdf (7 pages, 358637 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 69 PDF objects out of 1000 (max. 8388607)
+ 37 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

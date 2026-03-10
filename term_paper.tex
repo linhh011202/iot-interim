@@ -51,7 +51,7 @@ Traditional centralized trust management approaches, including trusted third par
 
 Beyond security, IoT technologies are increasingly deployed for urban sustainability objectives. Sensor equipped smart parking systems demonstrate measurable improvements in traffic congestion, fuel consumption, and carbon emissions through real time occupancy detection and predictive routing~\cite{b3}. Similarly, blockchain has emerged as a transformative tool for digital cultural heritage preservation, where provenance tracking, authenticity certification, and intellectual property management are paramount concerns~\cite{b2}.
 
-This survey synthesizes findings from three complementary studies: (1) a comprehensive review of blockchain for IoT security covering identity management, access control, and trust mechanisms~\cite{b1}; (2) a review of blockchain technology for digital cultural heritage resources management~\cite{b2}; and (3) a multiagent simulation study of IoT based smart parking for sustainable urban mobility~\cite{b3}. By analyzing these works together, we identify cross domain patterns, shared challenges, and converging future directions at the intersection of blockchain and IoT technologies.
+This survey synthesizes findings from three complementary studies: (1) a comprehensive review of blockchain for IoT security covering identity management, access control, and trust mechanisms~\cite{b1}; (2) a review of blockchain technology for digital cultural heritage resources management~\cite{b2}; and (3) a multiagent simulation study of IoT based smart parking for sustainable urban mobility~\cite{b3}. By analyzing these works together, we identify cross domain patterns, shared challenges, and converging future directions at the intersection of blockchain and IoT technologies. Beyond synthesis, we present quantitative performance comparisons including authentication latency and transaction throughput from recent implementations, and conduct a cross domain security analysis mapping threat vectors to blockchain based mitigation mechanisms.
 
 \section{Literature Review}
 
@@ -97,7 +97,7 @@ Traditional Proof of Work (PoW) consensus is impractical for resource constraine
 
 \subsubsection{AI/ML Integration}
 
-AI and machine learning enhance blockchain IoT trust management through behavioral analysis, trust prediction, and anomaly detection. Federated intrusion detection systems integrate deep learning with blockchain for cross node intelligence sharing while preserving data privacy~\cite{b15}. Reinforcement learning enables adaptive smart contract triggers for proactive resource management~\cite{b16}.
+AI and machine learning enhance blockchain IoT trust management through behavioral analysis, trust prediction, and anomaly detection. Federated intrusion detection systems integrate deep learning with blockchain for cross node intelligence sharing while preserving data privacy~\cite{b15}. Reinforcement learning enables adaptive smart contract triggers for proactive resource management~\cite{b16}. Hybrid deep learning frameworks combining bidirectional GRU and LSTM architectures have been proposed for dynamic trust assessment using device interaction histories, outperforming conventional static trust models~\cite{b1}. AI driven anomaly detection systems combining artificial neural networks with adaptive regression on Hyperledger Fabric achieve real time detection with minimal computational overhead~\cite{b1}. Fortino et al.~\cite{b22} demonstrated a multi agent trust architecture where IoT devices operate as software agents with quantifiable reputation capital updated through blockchain certified interactions, successfully identifying nearly all adversaries when malicious agents remained below 25\% of the network.
 
 \subsection{Blockchain for Digital Cultural Heritage}
 
@@ -133,7 +133,7 @@ The simulation models three agent types using Finite State Machine (FSM) transit
 \label{fig:arch}
 \end{figure}
 
-Results demonstrate substantial improvements: average parking search time decreased by 42\%, congestion within parking zones dropped by 35\%, and CO2 emissions from circling vehicles reduced by 27\%~\cite{b3}. The smart system reduced daily travel distance from approximately 384 km (periodic weekly strategy) to 71 km (smart threshold 0.9), with corresponding CO2 reductions from 309 kg/day to below 75 kg/day.
+Results demonstrate substantial improvements: average parking search time decreased by 42\%, congestion within parking zones dropped by 35\%, and CO2 emissions from circling vehicles reduced by 27\%~\cite{b3}. The smart system reduced daily travel distance from approximately 384 km (periodic weekly strategy) to 71 km (smart threshold 0.9), with corresponding CO2 reductions from 309 kg/day to below 75 kg/day. Regarding time efficiency, the periodic strategy with weekly reviews required up to 15.7 hours of cumulative daily search time, while the smart threshold 0.9 system reduced this to approximately 3.5 hours, a 77\% reduction during peak periods. User satisfaction measurements indicated that overutilized parking zones per day decreased from 3.2 under the periodic strategy to 2.16 under the smart system. Sensitivity analysis across 200 to 500 parking units confirmed that the smart model maintained consistently shorter travel distances across all configurations, while the periodic model's distances increased continuously with zone numbers~\cite{b3}. Computational performance of 1 to 2 seconds per simulated day for 200 units, with execution time scaling linearly, indicates favorable scalability for real time deployment.
 
 \section{Analysis and Comparison}
 
@@ -198,6 +198,92 @@ Privacy & Zero knowledge proofs~\cite{b19}, selective disclosure, differential p
 
 Analysis reveals several cross domain research gaps. First, all three studies acknowledge the absence of large scale real world deployments; most blockchain IoT approaches rely on prototypes or simulations. Second, quantitative benchmarking across solutions remains limited; the IoT security survey notes that no study directly compares consensus mechanisms under identical conditions. Third, the economic viability of blockchain deployment, including total cost of ownership and return on investment, is insufficiently explored. Fourth, the smart parking study identifies the need for blockchain integration to secure sensor data transactions, representing a natural convergence point between the IoT security and urban mobility domains.
 
+\subsection{Performance Results: Throughput and Latency}
+
+The surveyed studies provide quantitative performance evidence illuminating the practical viability of blockchain IoT integration. Table~\ref{tab:performance} summarizes key metrics reported across the reviewed literature.
+
+In the blockchain IoT security domain, authentication latency and transaction throughput are critical metrics. Mazzocca et al.~\cite{b20} developed EVOKE, an IoT oriented verifiable credential revocation scheme using elliptic curve based cryptographic accumulators, reporting approximately 1.5 KB overhead per node and witness generation of roughly 80 ms per million VCs, demonstrating scalable credential lifecycle management with minimal resource impact.
+
+For resource constrained devices, Fotiou et al.~\cite{b21} demonstrated a capabilities based access control framework encoding fine grained rights within W3C VCs, with prototype evaluations on Raspberry Pi and ESP32 showing VC generation under 0.1 ms and on device verification in 10 to 160 ms. Healthcare IoT pilots validated blockchain based key management reducing latency by 20\% compared to traditional PKI~\cite{b1}. Liu et al.~\cite{b13} showed that hierarchical blockchain architectures distributing consensus between edge and core layers achieve significant improvements in both latency and throughput through local lightweight validation at the edge.
+
+In the smart parking domain, the predictive routing module reduced cumulative daily search time from 15.7 hours to 3.5 hours, a 77\% reduction translating to improved response latency in driver system interactions~\cite{b3}. For digital cultural heritage, IPFS integration for off chain storage significantly reduces on chain transaction size, with MApp managing over 15,000 minor artwork records across Ethereum and Polygon chains~\cite{b17}.
+
+\begin{table}[htbp]
+\caption{Performance Metrics Across Blockchain IoT Solutions}
+\begin{center}
+\begin{tabular}{p{2.2cm}p{2.2cm}p{3.2cm}}
+\toprule
+\textbf{Solution} & \textbf{Metric} & \textbf{Result} \\
+\midrule
+EVOKE~\cite{b20} & VC overhead & 1.5 KB per node \\
+\midrule
+EVOKE~\cite{b20} & Witness gen. & 80 ms per million VCs \\
+\midrule
+CapBAC~\cite{b21} & VC generation & $<$0.1 ms \\
+\midrule
+CapBAC~\cite{b21} & Verification & 10--160 ms (RPi/ESP32) \\
+\midrule
+Hierarchical~\cite{b13} & Throughput & Improved via edge/core \\
+\midrule
+Smart parking~\cite{b3} & Search time & 15.7 h $\rightarrow$ 3.5 h \\
+\midrule
+MApp~\cite{b17} & Records & 15,000+ artworks tracked \\
+\bottomrule
+\end{tabular}
+\label{tab:performance}
+\end{center}
+\end{table}
+
+These results demonstrate that lightweight consensus, hierarchical architectures, and off chain storage enable blockchain IoT systems to meet practical latency and throughput requirements on constrained devices. However, standardized benchmarking frameworks are needed, as most studies evaluate under different testbed conditions~\cite{b1}.
+
+\subsection{Security Analysis}
+
+Security remains a fundamental concern across all three surveyed domains. This section analyzes threat models, mitigation mechanisms, and residual vulnerabilities.
+
+\subsubsection{Threat Landscape}
+
+The blockchain IoT ecosystem faces diverse threats varying by domain. Khayer et al.~\cite{b1} identify primary attack vectors: Sybil attacks where adversaries create fake identities to manipulate trust assessments; device spoofing through unauthorized impersonation; insider threats from compromised administrators; data tampering targeting sensor readings and transactions; and man in the middle attacks intercepting communications. For cultural heritage, threats include provenance forgery, unauthorized modification of artifact records, and double spending in NFT transactions~\cite{b2}. Smart parking systems face risks of sensor data manipulation and unauthorized access to occupancy information~\cite{b3}.
+
+\subsubsection{Mitigation Mechanisms}
+
+Blockchain provides multiple security layers across domains. Decentralization eliminates single points of failure, distributing risk across participants~\cite{b1}. Immutability ensures recorded data cannot be retroactively altered, providing tamper evident audit trails for heritage provenance~\cite{b2} and IoT device logging.
+
+Physical Unclonable Functions (PUFs) integrated with smart contracts provide hardware rooted authentication, countering Sybil attacks and device cloning. Javaid et al.~\cite{b4} demonstrated this for vehicular IoT, binding blockchain identities to unique hardware characteristics. Sybil resistant models using blockchain based voting strengthen resilience through distributed reputation validation~\cite{b5}.
+
+Zero knowledge proofs enable privacy preserving authentication without revealing sensitive information. The zk IoT framework~\cite{b19} maintains encrypted access logs on chain while preserving anonymity. Smart contracts automate security policy enforcement, with ABAC models enabling dynamic permissions based on device attributes and behavioral profiles~\cite{b7}. Federated intrusion detection combining deep learning with blockchain enables collaborative threat detection while preserving data privacy~\cite{b15}.
+
+Table~\ref{tab:security} maps primary threats to mitigation mechanisms across domains.
+
+\begin{table}[htbp]
+\caption{Security Threat Mitigation Across Domains}
+\begin{center}
+\begin{tabular}{p{1.8cm}p{2.5cm}p{3cm}}
+\toprule
+\textbf{Threat} & \textbf{Mitigation} & \textbf{Domain} \\
+\midrule
+Sybil attacks & PUF + blockchain voting & IoT security~\cite{b4,b5} \\
+\midrule
+Device spoofing & Smart contract verification & IoT security~\cite{b4} \\
+\midrule
+Data tampering & Immutable ledger & All domains~\cite{b1,b2} \\
+\midrule
+Privacy violation & ZKPs, selective disclosure & IoT, DCHR~\cite{b19,b2} \\
+\midrule
+Insider threats & Decentralized ABAC & IoT security~\cite{b7} \\
+\midrule
+Provenance forgery & NFT tokenization & DCHR~\cite{b2,b17} \\
+\midrule
+Sensor manipulation & Not yet addressed & Smart parking~\cite{b3} \\
+\bottomrule
+\end{tabular}
+\label{tab:security}
+\end{center}
+\end{table}
+
+\subsubsection{Residual Vulnerabilities}
+
+Despite these advances, significant gaps persist. The smart parking study explicitly acknowledges absent security mechanisms, identifying blockchain integration for secure sensor transactions as a critical future need~\cite{b3}. The DCHR domain faces challenges where immutability may freeze contested heritage narratives, and the enhanced Raft algorithm remains vulnerable to sustained attacks on predefined nodes~\cite{b2}. Across all domains, tensions between blockchain transparency and GDPR privacy requirements remain partially unresolved, with current off chain storage and consent management patterns adding architectural complexity~\cite{b1,b18}.
+
 \section{Conclusion}
 
 \begin{figure}[htbp]
@@ -207,6 +293,8 @@ Analysis reveals several cross domain research gaps. First, all three studies ac
 \end{figure}
 
 This survey synthesizes three complementary studies to examine how blockchain and IoT technologies address challenges in security, cultural heritage preservation, and urban sustainability. Our analysis identifies several key findings.
+
+Performance evaluation reveals that blockchain IoT solutions achieve practical throughput and latency levels, with verifiable credential operations executing in under 160 ms on constrained hardware~\cite{b21}. Security analysis demonstrates that PUFs, zero knowledge proofs, ABAC smart contracts, and federated intrusion detection effectively address major threats including Sybil attacks, device spoofing, and insider threats, though cross domain security integration and regulatory compliance remain open challenges~\cite{b1}.
 
 Blockchain provides robust mechanisms for decentralized trust management through DIDs, VCs, and smart contracts, effectively mitigating threats including Sybil attacks, device spoofing, and insider threats in IoT environments. For cultural heritage, blockchain enables immutable provenance tracking, NFT based tokenization, and ethical governance through smart contract encoded institutional guidelines. IoT sensor networks, when combined with predictive analytics, demonstrate measurable sustainability improvements: 42\% reduction in parking search time, 35\% congestion decrease, and 27\% lower CO2 emissions.
 
@@ -238,6 +326,11 @@ The authors thank the reviewers whose detailed analyses of the three surveyed pa
 \bibitem{b17} F. Valeonti, A. Bikakis, A. Terras, C. Speed, A. Hudson-Smith, and K. Chalkias, ``Crypto collectibles, museum funding and OpenGLAM: Challenges, opportunities and the potential of Non-Fungible Tokens (NFTs),'' \textit{Applied Sciences}, vol. 11, no. 21, p. 9931, 2021.
 \bibitem{b18} A. Politou, E. Alepis, and C. Patsakis, ``Forgetting personal data and revoking consent under the GDPR: Challenges and solutions,'' \textit{J. Cybersecur.}, vol. 4, no. 1, 2018.
 \bibitem{b19} G. Ramezan and E. Meamari, ``zk-IoT: Securing the Internet of Things with Zero-Knowledge Proofs on blockchain platforms,'' \textit{arXiv preprint arXiv:2402.08322}, 2024.
+\bibitem{b20} C. Mazzocca, A. Acar, A. S. Uluagac, and R. Montanari, ``EVOKE: Efficient Revocation of Verifiable Credentials in IoT Networks,'' in \textit{Proc. 33rd USENIX Security Symposium (USENIX Security 24)}, 2024, pp. 1279--1295.
+
+\bibitem{b21} N. Fotiou, V. A. Siris, G. C. Polyzos, Y. Kortesniemi, and D. Lagutin, ``Capabilities-based access control for IoT devices using Verifiable Credentials,'' in \textit{Proc. 2022 IEEE Security and Privacy Workshops (SPW)}, 2022, pp. 222--228, doi: 10.1109/SPW54247.2022.9833873.
+
+\bibitem{b22} G. Fortino, L. Fotia, F. Messina, D. Rosaci, and G. M. L. Sarn\'{e}, ``Trust and Reputation in the Internet of Things: State-of-the-Art and Research Challenges,'' \textit{IEEE Access}, vol. 8, pp. 60117--60125, 2020, doi: 10.1109/ACCESS.2020.2982318.
 \end{thebibliography}
 
 \end{document}
